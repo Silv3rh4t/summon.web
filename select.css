@@ -1,0 +1,167 @@
+body {
+    background: linear-gradient(120deg, #23243a 60%, #4f5b93 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .summon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .spirit-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(circle at 60% 40%, rgba(201, 179, 124, 0.08) 0%, rgba(41, 201, 184, 0.04) 100%);
+    animation: spirit-float 10s infinite alternate ease-in-out;
+  }
+
+  @keyframes spirit-float {
+    0% {
+      filter: blur(0px) brightness(1.1);
+    }
+
+    100% {
+      filter: blur(8px) brightness(1.3);
+    }
+  }
+
+  .spirit-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--accent);
+    text-shadow: 0 2px 16px #7f7fd577, 0 1px 0 #23243a;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .spirit-subtitle {
+    font-size: 1.1rem;
+    color: #eae7dc;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    text-shadow: 0 1px 8px #23243a99;
+  }
+
+  .summon-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+  }
+
+  .summon-card {
+    background: rgba(26, 24, 50, 0.92);
+    border: 2px solid var(--accent);
+    border-radius: 50px;
+    box-shadow: 0 8px 32px 0 rgba(127, 127, 213, 0.19);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 290px;
+    min-width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.18s, box-shadow 0.18s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .summon-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 16px 48px 0 rgba(201, 179, 124, 0.25);
+    border-color: #7f7fd5;
+  }
+
+  .summon-avatar {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    border: 3px solid var(--glow);
+    box-shadow: 0 0 26px 0 #7f7fd577;
+    background: #eae7dc;
+    object-fit: cover;
+  }
+
+  .summon-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+    text-shadow: 0 1px 8px #23243a99;
+  }
+
+  .summon-quote {
+    font-size: 1.06rem;
+    font-style: italic;
+    color: #c9b37c;
+    margin-bottom: 1.4rem;
+    text-align: center;
+    min-height: 56px;
+  }
+
+  .summon-btn {
+    background: linear-gradient(90deg, #7f7fd5 0%, #41c9b8 100%);
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 0.7rem 1.6rem;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 16px 0 #7f7fd577;
+    letter-spacing: 1px;
+    transition: background 0.16s, box-shadow 0.16s;
+    outline: none;
+  }
+
+  .summon-btn:hover {
+    background: linear-gradient(90deg, #41c9b8 0%, #7f7fd5 100%);
+    box-shadow: 0 4px 24px 0 #41c9b877;
+  }
+
+  /* AI circuit effect */
+  .ai-circuit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 32px;
+    background: repeating-linear-gradient(90deg, #2b2d42 0 6px, #7f7fd5 6px 8px, #2b2d42 8px 12px);
+    opacity: 0.18;
+    z-index: 1;
+    border-radius: 0 0 22px 22px;
+    pointer-events: none;
+  }
+
+  @media (max-width: 700px) {
+    .summon-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .summon-card {
+      min-width: 70vw;
+      max-width: 96vw;
+    }
+  }
+
+ 

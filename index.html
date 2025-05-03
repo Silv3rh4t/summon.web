@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summon a Philosopher</title>
+  <style>
+     [hidden] {
+    display: none !important;
+  }
+  </style>
+  <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./select.css">
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+
+<body>
+  <div id="selector-body">
+    <div class="spirit-bg"></div>
+    <div class="summon-container">
+      <div class="spirit-title">Summon a Philosopher</div>
+      <div class="spirit-subtitle">Invoke the wisdom of ages. Choose your guide from the spirit realm of philosophy and
+        converse with their AI essence.</div>
+      <div class="summon-cards">
+        <!-- Plato Card -->
+        <div class="summon-card" onclick="selectChat('Plato')">
+          <img class="summon-avatar" src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Plato-raphael.jpg"
+            alt="Plato">
+          <div class="summon-name">Plato</div>
+          <div class="summon-quote">“At the touch of love everyone becomes a poet.”</div>
+          <button class="summon-btn">Summon Plato</button>
+          <div class="ai-circuit"></div>
+        </div>
+        <!-- Marcus Aurelius Card -->
+        <div class="summon-card" onclick="selectChat('Marcus Aurelius')">
+          <img class="summon-avatar"
+            src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Marcus_Aurelius_Glyptothek_M%C3%BCnchen.jpg"
+            alt="Marcus Aurelius">
+          <div class="summon-name">Marcus Aurelius</div>
+          <div class="summon-quote">“You have power over your mind — not outside events. Realize this, and you will find
+            strength.”</div>
+          <button class="summon-btn">Summon Marcus</button>
+          <div class="ai-circuit"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chat-container" id="chat-container" hidden>
+    <div class="chat-header">
+      <span class="chat-title" id="chat-title"></span>
+      <span class="chat-sub" id="chat-sub"></span>
+    </div>
+    <div class="column-accent"></div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="message plato">Greetings, seeker of truth. You have summoned Marcus Aurelius to shed light on your
+        deepest questions—what matter of wisdom shall we examine together?</div>
+    </div>
+    <form class="chat-input" id="chat-form" autocomplete="off">
+      <input type="text" id="chat-input" placeholder="Summon your question..." required />
+      <button type="submit" title="Send"><span>&#9658;</span></button>
+    </form>
+  </div>
+  <script src="./index.js"></script>
+
+
+
+
+</body>
+
+</html>
