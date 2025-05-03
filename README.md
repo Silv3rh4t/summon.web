@@ -12,9 +12,8 @@ Please note that this repository and its backend are still in development, so up
 - [Overview](#overview)
 - [Features](#features)
 - [Project Structure](#project-structure)
-- [Setup & Usage](#setup--usage)
+- [Usage](#usage)
 - [Backend Glimpse](#backend-glimpse)
-- [Customization](#customization)
 - [License](#license)
 
 ---
@@ -41,7 +40,7 @@ The frontend is static (HTML/CSS/JS) and communicates with a Python FastAPI back
 
 ## Usage
 
- Visit https://akhandyaduvanshi.in/summon/
+ Visit https://akhandyaduvanshi.in/summon.web/
 
 
 ## Backend Glimpse 
@@ -53,13 +52,6 @@ The backend for this project is built with Python and FastAPI. It provides endpo
 - **AI Logic**: Utilizes LangChain, OpenAI, Gemini and HuggingFace models for conversational intelligence and Pinecone for vector search
 - **Session Handling**: Maintains chat history context per user session
 
-
----
-
-## Customization
-- Add new philosophers by extending the HTML and updating backend logic
-- Modify `select.css` for custom themes and UI tweaks
-- Update avatars and quotes by editing `select.html`
 
 ---
 
